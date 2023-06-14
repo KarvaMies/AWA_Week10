@@ -13,9 +13,11 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
+/*
 router.get("/user/register", (req, res, next) => {
   res.render('register');
 })
+*/
 
 router.post("/user/register",
   body("email").isLength({min: 3}).trim().escape(),
