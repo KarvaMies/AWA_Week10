@@ -47,7 +47,7 @@ router.post("/user/register",
             (err, ok) => {
               if (err) throw err;
               console.log({ email: req.body.email, password: hash })
-              return res.redirect("/api/user/login")
+              return res.redirect("/login.html")
             }
           )
         })
