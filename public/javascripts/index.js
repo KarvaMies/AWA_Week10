@@ -3,8 +3,6 @@ const token = localStorage.getItem("auth_token");
 if (token) {
   const email = parseJwt(token).email;
   document.getElementById("user-email").innerText = email;
-
-  document.getElementById("logout").style.display = "inline-block";
 } else {
   const links = document.getElementById("links");
   links.innerHTML = `
@@ -13,7 +11,9 @@ if (token) {
   `;
 
   document.getElementById("user-email").innerText = "";
-  document.getElementById("logout").style.display = "none";
+
+  const logout = document.getElementById("logout");
+  logout.parentElement.removeChild(logout);
 }
 
 const logout = document.getElementById("logout");
