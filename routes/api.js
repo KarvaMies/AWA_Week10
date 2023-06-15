@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
-const {body, validationResult } = require("express-validator");
+const { body, validationResult } = require("express-validator");
 const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 const validateToken = require("../auth/validateToken.js")
@@ -16,12 +16,6 @@ router.use(express.json());
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
-
-/*
-router.get("/user/register", (req, res, next) => {
-  res.render('register');
-})
-*/
 
 router.post("/user/register",
   body("email").isLength({min: 3}).trim().escape(),
