@@ -5,14 +5,16 @@
 </head>
 <body>
   <h1>Login page</h1>
-  <!--form action="/api/user/register" id="registration-form" method="post">
+  <div id="error", class="card-panel"></div>
+  <form action="/api/user/login" id="login-form" method="post">
     <div class="container">
       <label for="email">Email</label>
       <input type="email" name="email" id="input-email" placeholder="Enter email" required>
       <label for="password">Password</label>
       <input type="password" name="password" id="input-password" placeholder="Enter password" required>
-      <input type="submit" value="Register">
+      <input type="submit" value="Login">
     </div>
-  </form-->
+  </form>
+  <script type="text/javascript" src="./javascripts/login.js"></script>
 </body>
 </html>
